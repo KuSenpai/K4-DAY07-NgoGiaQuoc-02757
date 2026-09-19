@@ -18,5 +18,7 @@ __pycache__/
 .venv/
 src_w_solution/
 
+#skill
+CLAUDE.md
 # Instructor-only notes (chứa gợi ý/đáp án chấm bài, không public cho học viên)
 docs/INSTRUCTOR_GUIDE.md

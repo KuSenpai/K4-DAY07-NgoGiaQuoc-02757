@@ -1,0 +1,79 @@
+=== BASELINE ANALYSIS (không gồm frontmatter) ===
+thoi-khoa-bieu-dang-ky-hoc-phan            fixed_size     count=  8 avg_length=481.25
+thoi-khoa-bieu-dang-ky-hoc-phan            by_sentences   count= 16 avg_length=238.50
+thoi-khoa-bieu-dang-ky-hoc-phan            recursive      count=  8 avg_length=469.25
+chuyen-doi-tin-chi                         fixed_size     count=  7 avg_length=459.29
+chuyen-doi-tin-chi                         by_sentences   count=  3 avg_length=1068.33
+chuyen-doi-tin-chi                         recursive      count=  7 avg_length=445.86
+yeu-cau-cap-bang-diem-va-chung-nhan        fixed_size     count= 11 avg_length=459.27
+yeu-cau-cap-bang-diem-va-chung-nhan        by_sentences   count= 10 avg_length=502.30
+yeu-cau-cap-bang-diem-va-chung-nhan        recursive      count= 11 avg_length=450.00
+
+=== BENCHMARK ===
+Chunker: HeadingChunker
+Embedding backend: text-embedding-3-small
+Số tài liệu nguồn: 6
+Số chunk đã nạp: 90
+
+Q1: Tối đa bao nhiêu tín chỉ được phép chuyển vào chương trình đại học tại VinUni?
+  Gold answer: Tối đa 60 tín chỉ.
+  Top-3:
+    1. score=0.7397 doc_id=chuyen-doi-tin-chi chunk=chuyen-doi-tin-chi#6
+       Các lưu ý quan trọng Tối đa 60 tín chỉ được phép chuyển vào chương trình đại học tại VinUni Các môn học được chuyển tín chỉ sẽ có ký hiệu điểm là “T” và không được tính vào GPA Thờ
+    2. score=0.6777 doc_id=chuyen-doi-tin-chi chunk=chuyen-doi-tin-chi#1
+       # Chuyển đổi tín chỉ - Registrar Nếu bạn đã hoàn thành các học phần tại các cơ sở giáo dục được công nhận — thông qua chương trình đại học chính quy, chương trình trao đổi đã được
+    3. score=0.6411 doc_id=chinh-sach-quy-dinh chunk=chinh-sach-quy-dinh#7
+       Danh mục chính sách học thuật: 10. Hướng dẫn quy trình chuyển đổi tín chỉ Quy định quy trình chính thức và tiêu chí xét duyệt cho sinh viên muốn chuyểnđổi tín chỉ học thuật từ bên
+    gold_doc_rank=1; answer_chunk_rank=1
+
+Q2: Học phần cần đáp ứng mức tương đương nội dung và điểm tối thiểu nào để được xem xét chuyển đổi tín chỉ?
+  Gold answer: Nội dung tương đương ít nhất 70% và điểm tối thiểu là C hoặc tương đương.
+  Top-3:
+    1. score=0.6350 doc_id=chuyen-doi-tin-chi chunk=chuyen-doi-tin-chi#4
+       Điều kiện được xem xét chuyển đổi tín chỉ VinUni sẽ xem xét chuyển tín chỉ nếu học phần: Được học tại một cơ sở đào tạo được công nhận Có nội dung tương đương ít nhất 70% so với họ
+    2. score=0.5183 doc_id=chuyen-doi-tin-chi chunk=chuyen-doi-tin-chi#5
+       Các kỳ thi nâng cao cấp trung học Sinh viên có thể được xem xét chuyển tín chỉ nếu đạt kết quả cao trong các kỳ thi quốc tế sau: Advanced Placement (AP) International Baccalaureate
+    3. score=0.5003 doc_id=chuyen-doi-tin-chi chunk=chuyen-doi-tin-chi#3
+       Cách thức gửi yêu cầu Tất cả yêu cầu phải được gửi qua email đến Phòng Quản lý Đào tạo tại [email protected] kèm theo các tài liệu sau: Mẫu Yêu cầu Chuyển đổi Tín chỉ đã điền đầy đ
+    gold_doc_rank=1; answer_chunk_rank=1
+
+Q3: Trên SIS cần thao tác thế nào để hoàn tất đăng ký môn và trạng thái nào xác nhận đăng ký thành công?
+  Gold answer: Nhấn “Add”, sau đó “Register”; trạng thái phải là “Registered”.
+  Top-3:
+    1. score=0.6863 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#5
+       Cách sử dụng SIS để đăng ký môn học Nhấn “Add” rồi “Register” để hoàn tất. Đảm bảo trạng thái môn học là “Registered” (nếu là “Selected” tức là chưa đăng ký thành công). 5. Xác nhậ
+    2. score=0.6556 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#2
+       Các bước quan trọng Chúng tôi khuyến nghị bạn làm theo các bước sau để đảm bảo quá trình đăng ký diễn ra suôn sẻ: 1. Xem lại Kế hoạch học tập Kiểm tra lộ trình học phần gợi ý được
+    3. score=0.6426 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#4
+       Cách sử dụng SIS để đăng ký môn học Làm theo các bước sau để đăng ký thành công trên SIS: 1. Đăng nhập vào SIS 🔗 Go to SIS Sử dụng email và mật khẩu VinUni của bạn. 2. Truy cập tra
+    gold_doc_rank=1; answer_chunk_rank=1
+
+Q4: Yêu cầu bảng điểm hoặc thư xác nhận thường mất bao lâu và phí mỗi bản là bao nhiêu?
+  Gold answer: Thông thường 2–3 ngày làm việc, có thể đến 5 ngày vào mùa cao điểm; phí 50.000 VNĐ mỗi bản.
+  Top-3:
+    1. score=0.5350 doc_id=yeu-cau-cap-bang-diem-va-chung-nhan chunk=yeu-cau-cap-bang-diem-va-chung-nhan#0
+       # Yêu cầu cấp Bảng điểm và Chứng nhận - Registrar Yêu cầu cấp Bảng điểm và Chứng nhận - Registrar Yêu cầu cấp Bảng điểm và Chứng nhận Trang chủ Học thuật & Dịch vụ Yêu cầu cấp Bảng
+    2. score=0.5228 doc_id=yeu-cau-cap-bang-diem-va-chung-nhan chunk=yeu-cau-cap-bang-diem-va-chung-nhan#9
+       Chi Phí & Giao Nhận Mục Phí Ghi chú Mỗi loại tài liệu 50.000 VNĐ / bản Áp dụng cho tất cả các loại bảng điểm và thư xác nhận Nhận tại trường Miễn phí Tại Văn phòng Registrar, trong
+    3. score=0.4870 doc_id=yeu-cau-cap-bang-diem-va-chung-nhan chunk=yeu-cau-cap-bang-diem-va-chung-nhan#1
+       # Yêu cầu cấp Bảng điểm và Chứng nhận - Registrar Dù bạn là sinh viên đang theo học hay đã tốt nghiệp, Phòng Quản lý Đào tạo luôn sẵn sàng hỗ trợ hành trình học tập của bạn thông q
+    gold_doc_rank=1; answer_chunk_rank=không có
+
+Q5: Cần thực hiện những bước nào để đăng ký học phần?
+  Gold answer: Đăng nhập SIS, mở Course Registration, tìm môn, nhấn Add rồi Register và kiểm tra Your Class Schedule.
+  Có filter {'audience': 'student'}:
+    1. score=0.7222 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#2
+       Các bước quan trọng Chúng tôi khuyến nghị bạn làm theo các bước sau để đảm bảo quá trình đăng ký diễn ra suôn sẻ: 1. Xem lại Kế hoạch học tập Kiểm tra lộ trình học phần gợi ý được
+    2. score=0.6364 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#0
+       # Thời khóa biểu & Đăng ký học phần - Registrar Thời khóa biểu & Đăng ký học phần - Registrar Thời khóa biểu & Đăng ký học phần Trang chủ Học thuật & Dịch vụ Thời khóa biểu & Đăng
+    3. score=0.6203 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#1
+       # Thời khóa biểu & Đăng ký học phần - Registrar Chào mừng bạn đến với trang đăng ký môn học. Tại đây, bạn sẽ được hướng dẫn cách chuẩn bị, đăng ký và quản lý kế hoạch học tập tại V
+    gold_doc_rank=1; answer_chunk_rank=không có
+  Không filter:
+    1. score=0.7222 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#2
+       Các bước quan trọng Chúng tôi khuyến nghị bạn làm theo các bước sau để đảm bảo quá trình đăng ký diễn ra suôn sẻ: 1. Xem lại Kế hoạch học tập Kiểm tra lộ trình học phần gợi ý được
+    2. score=0.6364 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#0
+       # Thời khóa biểu & Đăng ký học phần - Registrar Thời khóa biểu & Đăng ký học phần - Registrar Thời khóa biểu & Đăng ký học phần Trang chủ Học thuật & Dịch vụ Thời khóa biểu & Đăng
+    3. score=0.6203 doc_id=thoi-khoa-bieu-dang-ky-hoc-phan chunk=thoi-khoa-bieu-dang-ky-hoc-phan#1
+       # Thời khóa biểu & Đăng ký học phần - Registrar Chào mừng bạn đến với trang đăng ký môn học. Tại đây, bạn sẽ được hướng dẫn cách chuẩn bị, đăng ký và quản lý kế hoạch học tập tại V
+    gold_doc_rank=1; answer_chunk_rank=không có

@@ -1,0 +1,53 @@
+import csv
+import re
+from pathlib import Path
+
+D = Path("data/VinUni")
+REQ = [
+    "doc_id",
+    "title",
+    "source_url",
+    "retrieved_at",
+    "document_version",
+    "audience",
+]
+
+mds = sorted(D.glob("*.md"))
+
+with open(D / "sources.csv", encoding="utf-8", newline="") as csv_file:
+    rows = list(csv.DictReader(csv_file))
+
+ids, auds = [], {}
+
+for p in mds:
+    text = p.read_text(encoding="utf-8")
+    fm = dict(
+        re.findall(
+            r"^(\w+):\s*(.+)$",
+            text.split("---")[1],
+            re.M,
+        )
+    )
+
+    ids.append(fm.get("doc_id"))
+    audience = fm.get("audience")
+    auds[audience] = auds.get(audience, 0) + 1
+
+    valid = (
+        all(k in fm for k in REQ)
+        and fm.get("doc_id") == p.stem
+    )
+
+    print(
+        f"{p.name:40} "
+        f"{'OK' if valid else 'THIEU METADATA'}"
+    )
+
+print("so file :", len(mds), "(can 5-10)")
+print(
+    "csv     :",
+    "khop"
+    if sorted(r["doc_id"] for r in rows) == sorted(ids)
+    else "LECH",
+)
+print("audience:", auds)
